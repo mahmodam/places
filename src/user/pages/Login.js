@@ -72,8 +72,15 @@ function Login() {
         >
           <Form className="place-form">
             <div className="form-control">
-              <label htmlFor="email">E-Mail</label>
-              <Field type="email" id="email" name="email" />
+              <label className="form-control-label" htmlFor="email">
+                E-Mail
+              </label>
+              <Field
+                className="form-control-field"
+                type="email"
+                id="email"
+                name="email"
+              />
               <ErrorMessage
                 className="form-control-invalid"
                 name="email"
@@ -81,8 +88,15 @@ function Login() {
               />
             </div>
             <div className="form-control">
-              <label htmlFor="password">Password</label>
-              <Field type="password" id="password" name="password" />
+              <label className="form-control-label" htmlFor="password">
+                Password
+              </label>
+              <Field
+                className="form-control-field"
+                type="password"
+                id="password"
+                name="password"
+              />
               <ErrorMessage
                 className="form-control-invalid"
                 name="password"

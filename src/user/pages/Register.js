@@ -98,8 +98,15 @@ function Register(props) {
           {({ values, setFieldValue }) => (
             <Form className="place-form">
               <div className="form-control">
-                <label htmlFor="name">Your Name</label>
-                <Field type="text" id="name" name="name" />
+                <label className="form-control-label" htmlFor="name">
+                  Your Name
+                </label>
+                <Field
+                  className="form-control-field"
+                  type="text"
+                  id="name"
+                  name="name"
+                />
                 <ErrorMessage
                   className="form-control-invalid"
                   name="name"
@@ -128,8 +135,15 @@ function Register(props) {
               </Button>
 
               <div className="form-control">
-                <label htmlFor="email">E-Mail</label>
-                <Field type="email" id="email" name="email" />
+                <label className="form-control-label" htmlFor="email">
+                  E-Mail
+                </label>
+                <Field
+                  className="form-control-field"
+                  type="email"
+                  id="email"
+                  name="email"
+                />
                 <ErrorMessage
                   className="form-control-invalid"
                   name="email"
@@ -137,8 +151,15 @@ function Register(props) {
                 />
               </div>
               <div className="form-control">
-                <label htmlFor="password">Password</label>
-                <Field type="password" id="password" name="password" />
+                <label className="form-control-label" htmlFor="password">
+                  Password
+                </label>
+                <Field
+                  className="form-control-field"
+                  type="password"
+                  id="password"
+                  name="password"
+                />
                 <ErrorMessage
                   className="form-control-invalid"
                   name="password"
