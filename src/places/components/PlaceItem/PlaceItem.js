@@ -6,6 +6,9 @@ import LoadingSpinner from "../../../shared/components/UIElements/LoadingSpinner
 import Map from "../../../shared/components/UIElements/Map/Map";
 import Modal from "../../../shared/components/UIElements/Modal/Modal";
 import { AuthContext } from "../../../shared/context/auth-context";
+import { FaTrash, FaRegEdit } from "react-icons/fa";
+import { GrMapLocation } from "react-icons/gr";
+
 import "./PlaceItem.css";
 
 function PlaceItem(props) {
@@ -77,7 +80,7 @@ function PlaceItem(props) {
               Cancel
             </Button>
             <Button danger onClick={confirmDeleteHandler}>
-              Delete
+              <FaTrash /> Delete
             </Button>
           </>
         }
@@ -104,14 +107,17 @@ function PlaceItem(props) {
           </div>
           <div className="place-item__actions">
             <Button inverse onClick={openMapHandler}>
-              VIEW ON MAP
+              <GrMapLocation /> VIEW ON MAP
             </Button>
             {auth.userId === props.creatorId && (
-              <Button to={`/places/${props.id}`}>EDIT</Button>
+              <Button to={`/places/${props.id}`}>
+                {" "}
+                <FaRegEdit /> EDIT
+              </Button>
             )}
             {auth.userId === props.creatorId && (
               <Button danger onClick={showDeleteWarningHandler}>
-                DELETE
+                <FaTrash /> DELETE
               </Button>
             )}
           </div>
